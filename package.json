@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:android": "next build && cap build android",
+    "build:apk": "next build && cap build android --release",
+    "cap:sync": "cap sync android",
+    "cap:copy": "cap copy android"
   },
   "dependencies": {
     "next": "^16.0.0",
@@ -21,7 +25,12 @@
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "lucide-react": "^0.294.0"
+    "lucide-react": "^0.294.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/app": "^6.1.0",
+    "@capacitor/status-bar": "^6.1.0",
+    "@capacitor/keyboard": "^6.1.0"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
